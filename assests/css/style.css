@@ -1,0 +1,526 @@
+/* Resetting default styles for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Setting font family for headings */
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Setting font family and color for various headings */
+h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: #3b434a;
+}
+
+/* Setting font family, weight, and size for paragraphs */
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+/* Setting font family for the entire body and background color */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Styling for specific elements with class "val" */
+.val {
+  font-style: normal;
+}
+
+/* Styling for the header section */
+#header {
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for class "cname" within the header section */
+.cname {
+  position: absolute;
+  left: 60px;
+  font-weight: 100;
+}
+
+/* Styling pseudo-element ":before" for class "cname" */
+.cname:before {
+  content: "N M ";
+  color: #0078ff !important;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+/* Styling for navigation links */
+.nav-link {
+  color: gray;
+}
+
+/* Styling for the active navigation link */
+.active-nav {
+  color: #0078ff !important;
+}
+
+/* Styling for navigation links on hover */
+.navbar a:hover {
+  color: #0078ff !important;
+}
+
+/* Hover animation for underlining links */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+/* Hover animation for underlining links on hover */
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 5px;
+  left: 4px;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+/* Hover animation for underlining links on hover (scaling up) */
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Styling for the banner section */
+#banner {
+  overflow: hidden;
+  background-image: url('../images/banner-bg.jpg');
+  min-height: 405px;
+  height: 110vh;
+  width: 100%;
+  position: relative;
+  bottom: 104px;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Styling for the content within the banner section */
+.banner-content {
+  z-index: 2;
+}
+
+/* Styling for the banner title */
+.banner-title {
+  margin-top: 333px;
+  font-size: 65px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+/* Styling pseudo-element ":before" for the banner title */
+.banner-title:before {
+  content: "F";
+  color: #0078ff !important;
+  font-size: 70px;
+}
+
+/* Styling for the banner button */
+.banner-button {
+  border-radius: 30px;
+  padding: 10px 20px;
+  background-color: #0078ff;
+}
+
+/* Styling for the banner button on hover */
+.banner-button:hover {
+  text-decoration: none;
+  background-color: yellow !important;
+  color: #000 !important;
+}
+
+/* Styling for social media icons within the banner */
+#banner a i {
+  font-size: 35px;
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Styling for social media links within the banner on hover */
+#banner a:hover {
+  text-decoration: none;
+}
+
+/* Keyframes animation for social media icons */
+@keyframes updown {
+  0% {
+    margin-top: 15px;
+  }
+  100% {
+    margin-top: 25px;
+  }
+}
+
+/* Styling for the about section */
+#about {
+  overflow: hidden;
+  position: relative;
+  bottom: 10px;
+  padding: 100px 10px;
+}
+
+/* Styling for various section titles */
+.about-title, .resume-title, .service-title, .portfolio-title, .skill-title {
+  font-size: 44px;
+  font-weight: bolder;
+}
+
+/* Styling for the about box */
+.about-box {
+  border-radius: 10px;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the biography paragraph */
+.mybio-para {
+  text-indent: 120px;
+  text-align: justify;
+}
+
+/* Styling for the about image */
+.about-img {
+  border-radius: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+/* Styling for pseudo-element ":after" in the "mybio-title" */
+.mybio-title::after {
+  content: ' ';
+  background: red;
+  display: block;
+  height: 1px;
+  width: 98px;
+  margin-left: 0px;
+}
+
+/* Styling for pseudo-element ":after" in the "about-title" */
+.about-title::after {
+  content: " Me";
+  color: #0078ff !important;
+}
+
+/* Styling for the skills section */
+#skill {
+  padding: 100px 10px;
+}
+
+/* Styling for pseudo-element ":after" in the "skill-title" */
+.skill-title::after {
+  content: ' ';
+  background: #cee5ff;
+  display: block;
+  height: 7px;
+  width: 42px;
+  margin-bottom: 4px;
+  margin-left: 28rem;
+}
+
+/* Styling for skill cards */
+.skill-card {
+  background-color: #cee5ff;
+  box-shadow: 5px 10px 18px #888888;
+  border-radius: 10px;
+}
+
+/* Styling for skill images */
+.skill-img {
+  height: 80px;
+  width: 80px;
+  margin-left: 7.2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Styling for skill cards on hover */
+.skill-card:hover {
+  background-color: #003168;
+  transition: all 0.5s;
+  transform: scale(0.9);
+  color: white;
+  border-color:#0078ff;
+  border-width: 2px;
+}
+
+.skill-card-text{
+  border-top: 1px inset black;
+  font-size: 20px;
+  color: #3a434a;
+}
+
+/* Styling for the services section */
+#service {
+  padding: 100px 10px;
+}
+
+/* Styling for pseudo-element ":after" in the "service-title" */
+.service-title::after {
+  content: ' ';
+  background: #cee5ff;
+  display: block;
+  height: 7px;
+  width: 55px;
+  margin-bottom: 4px;
+  margin-left: 26rem;
+}
+
+/* Styling for service icons */
+.services-ic {
+  color: black;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 50%;
+  border: 6px solid #007bff;
+}
+
+/* Styling for service cards */
+.service-card {
+  box-shadow: 5px 10px 18px #888888;
+  border-radius: 10px;
+}
+
+/* Styling for service cards on hover */
+.service-card:hover {
+  border-color: #007bff;
+}
+
+/* Styling for service card titles on hover */
+.service-card:hover h5 {
+  color: #007bff;
+}
+
+/* Styling for service icons on hover */
+.services-ic:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #cee5ff;
+}
+
+/* Styling for the work section */
+#work {
+  padding: 100px 10px;
+}
+
+/* Styling for the work box */
+.work-box {
+  min-height: 60vh;
+  background-color: #0054b3;
+}
+
+/* Styling for work elements */
+.work-element {
+  flex-direction: column;
+}
+
+/* Styling for work icons */
+.work-ic {
+  color: #3c97fc;
+  font-size: 30px;
+  position: relative;
+  top: 13px;
+}
+
+/* Styling for rounded work icons */
+.work-round {
+  height: 60px;
+  width: 60px;
+  line-height: 1.5;
+  box-shadow: 0 0 0 10px #3c97fc;
+  border-radius: 50%;
+  margin-left: 4rem;
+}
+
+/* Styling for work box titles and paragraphs */
+.work-box h5, .work-box p {
+  color: #3c97fc !important;
+}
+
+/* Styling for the portfolio section */
+#portfolio {
+  padding: 100px 10px;
+}
+
+/* Styling for pseudo-element ":after" in the "portfolio-title" */
+.portfolio-title::after {
+  content: ' ';
+  background: #cee5ff;
+  display: block;
+  height: 7px;
+  width: 55px;
+  margin-bottom: 4px;
+  margin-left: 26rem;
+}
+
+/* Styling for portfolio cards */
+.portfolio-card {
+  border-radius: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+/* Styling for portfolio icons */
+.portfolio-ic {
+  font-size: 47px;
+  position: relative;
+  left: 59px;
+  color: #3395ff;
+}
+
+/* Styling for the footer section */
+.footer-box {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Media query for responsive design (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Adjusting header styles for smaller screens */
+  #header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
+  }
+  .cname {
+    font-size: 30px;
+    margin-left: -39px;
+    font-weight: 100;
+    z-index: 2;
+    margin-top: 4px;
+  }
+  .cname:before {
+    content: "N M ";
+    color: #0078ff !important;
+    font-size: 30px;
+    font-weight: 300;
+    z-index: 2;
+  }
+
+  /* Adjusting banner styles for smaller screens */
+  #banner {
+    overflow: hidden;
+    background-image: url('../images/banner-bg.jpg');
+    min-height: 405px;
+    height: 110vh;
+    width: 100%;
+    position: relative;
+    bottom: 104px;
+    background-size: cover;
+    z-index: 1;
+    background-position: top;
+  }
+  .banner-content {
+    z-index: 2;
+  }
+  .banner-title {
+    margin-top: 333px;
+    font-size: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  .banner-title:before {
+    content: "F";
+    color: #0078ff !important;
+    font-size: 60px;
+  }
+
+  /* Adjusting various section titles for smaller screens */
+  .about-title, .resume-title, .service-title, .portfolio-title {
+    font-size: 44px;
+    font-weight: bolder;
+  }
+  /* Adjusting about image styles for smaller screens */
+  .about-img {
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px #888888;
+    margin-left: 34px;
+    margin-bottom: 32px;
+  }
+  #service {
+    padding: 268px 10px;
+  }
+  /* Adjusting work round styles for smaller screens */
+  .work-round {
+    height: 60px;
+    width: 60px;
+    line-height: 1.5;
+    box-shadow: 0 0 0 10px #3c97fc;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  /* Adjusting skill title styles for smaller screens */
+  .skill-title::after {
+    content: ' ';
+    background: #cee5ff;
+    display: block;
+    height: 7px;
+    width: 41px;
+    margin: auto;
+  }
+
+  /* Adjusting bio title and span styles for smaller screens */
+  .about-skills-title {
+    font-size: 24px;
+  }
+  .about-span {
+    font-size: 20px;
+  }
+
+  /* Adjusting service title styles for smaller screens */
+  .service-title::after {
+    content: ' ';
+    background: #cee5ff;
+    display: block;
+    height: 7px;
+    width: 100px;
+    margin: auto;
+  }
+  .portfolio-ic {
+    font-size: 30px;
+    position: relative;
+    left: 59px;
+    color: #3395ff;
+  }
+
+  /* Adjusting portfolio title styles for smaller screens */
+  .portfolio-title::after {
+    content: ' ';
+    background: #cee5ff;
+    display: block;
+    height: 7px;
+    width: 100px;
+    margin: auto;
+  }
+
+  /* Adjusting bio title styles for smaller screens */
+  .mybio-title::after {
+    content: ' ';
+    background: red;
+    display: block;
+    height: 1px;
+    width: 98px;
+    margin-left: 0px;
+  }
+}
